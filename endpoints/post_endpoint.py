@@ -5,7 +5,7 @@ from endpoints.endpoints_handler import Endpoint
 class CreatePost(Endpoint):
     title = None
     body = None
-    userId = None
+    userid = None
     id = None
 
     def create_post(self, title_value, body_value, user_id):
@@ -16,18 +16,22 @@ class CreatePost(Endpoint):
         self.status = response.status_code
         self.title = response.json()['title']
         self.body = response.json()['body']
-        self.userId = response.json()['userId']
+        self.userid = response.json()['userId']
         self.id = response.json()['id']
         return response
 
     def check_title(self):
+        print("\ntitle:", self.title)  # for debug
         assert self.title is not None
 
     def check_body(self):
+        print("\nbody:", self.body)  # for debug
         assert self.body is not None
 
-    def check_userId(self):
-        assert self.userId is not None
+    def check_userid(self):
+        print("\nuserid:", self.userid)  # for debug
+        assert self.userid is not None
 
     def check_id(self):
+        print("\nid:", self.id)  # for debug
         assert self.id is not None
