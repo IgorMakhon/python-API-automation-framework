@@ -19,14 +19,14 @@ class CreatePost(Endpoint):
         self.id = response.json()['id']
         return response
 
-    def check_title(self):
+    def check_title_not_none(self):
         print("\ntitle:", self.title)  # for debug
         assert self.title is not None
 
-    def check_body(self):
+    def check_body_not_none(self):
         print("\nbody:", self.body)  # for debug
         assert self.body is not None
 
-    def check_userid(self):
+    def check_userid_not_none(self):
         print("\nuserid:", self.userid)  # for debug
         assert self.userid is not None

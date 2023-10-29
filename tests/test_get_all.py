@@ -10,7 +10,7 @@ def test_get_all_status_ok(get_all_post_fixture, start_end_session):
 @pytest.mark.get_all_endpoint
 def test_get_all_title_is_not_empty(get_all_post_fixture):
     get_all_post_fixture.get_all_post()  # get all posts
-    get_all_post_fixture.check_title_in_get_all()
+    get_all_post_fixture.check_title_in_get_all_not_none()
 
 
 @pytest.mark.get_all_endpoint

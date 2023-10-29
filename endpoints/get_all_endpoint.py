@@ -16,14 +16,14 @@ class GetAllPost(Endpoint):
         self.id = response.json()[0]['id']
         return response
 
-    def check_title_in_get_all(self):
+    def check_title_in_get_all_not_none(self):
         print("\ntitle:", self.title)
         assert self.title is not None
 
-    def check_body_in_get_all(self):
+    def check_body_in_get_all_not_none(self):
         print("\nbody:", self.body)
         assert self.body is not None
 
-    def check_userid_in_get_all(self):
+    def check_userid_in_get_all_not_none(self):
         print("\nuserid:", self.userid)
         assert self.userid is not None
