@@ -6,7 +6,6 @@ class GetIdPost(Endpoint):
     title = None
     body = None
     userid = None
-    id = None
 
     def get_id_post(self, id_rand):
         response = requests.get(f'https://jsonplaceholder.typicode.com/posts/{id_rand}')
@@ -18,17 +17,13 @@ class GetIdPost(Endpoint):
         return response
 
     def check_title_in_get_id(self):
-        print("\ntitle:", self.title)
+        print("\ntitle:", self.title)  # for debug
         assert self.title is not None
 
     def check_body_in_get_id(self):
-        print("\nbody:", self.body)
+        print("\nbody:", self.body)  # for debug
         assert self.body is not None
 
     def check_userid_in_get_id(self):
-        print("\nuserid:", self.userid)
+        print("\nuserid:", self.userid)  # for debug
         assert self.userid is not None
-
-    def check_id_is_int_in_get_id(self):
-        print("\nid:", self.id)
-        assert isinstance(self.id, int)

@@ -6,7 +6,6 @@ class GetAllPost(Endpoint):
     title = None
     body = None
     userid = None
-    id = None
 
     def get_all_post(self):
         response = requests.get('https://jsonplaceholder.typicode.com/posts')
@@ -28,7 +27,3 @@ class GetAllPost(Endpoint):
     def check_userid_in_get_all(self):
         print("\nuserid:", self.userid)
         assert self.userid is not None
-
-    def check_id_is_int_in_get_all(self):
-        print("\nid:", self.id)
-        assert isinstance(self.id, int)

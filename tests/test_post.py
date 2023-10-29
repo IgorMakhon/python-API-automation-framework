@@ -16,9 +16,9 @@ def test_post_title_is_not_none(create_post_fixture, random_string_5_chars, rand
 
 
 @pytest.mark.post_endpoint
-def test_post_id_is_not_none(create_post_fixture, random_string_5_chars, random_string_10_chars, random_int):
+def test_post_id_is_int_type(create_post_fixture, random_string_5_chars, random_string_10_chars, random_int):
     create_post_fixture.create_post(random_string_5_chars, random_string_10_chars, random_int)
-    create_post_fixture.check_id()
+    create_post_fixture.check_id_is_int_type()
 
 
 @pytest.mark.post_endpoint

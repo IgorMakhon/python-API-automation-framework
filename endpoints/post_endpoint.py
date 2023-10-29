@@ -6,7 +6,6 @@ class CreatePost(Endpoint):
     title = None
     body = None
     userid = None
-    id = None
 
     def create_post(self, title_value, body_value, user_id):
         response = requests.post('https://jsonplaceholder.typicode.com/posts',
@@ -31,7 +30,3 @@ class CreatePost(Endpoint):
     def check_userid(self):
         print("\nuserid:", self.userid)  # for debug
         assert self.userid is not None
-
-    def check_id(self):
-        print("\nid:", self.id)  # for debug
-        assert self.id is not None
